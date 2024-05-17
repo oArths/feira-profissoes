@@ -15,7 +15,9 @@ const Register = ()=> {
                         <Input onChange={""} Title="Data de Nascimento:"/>
                         <Input onChange={""} Title="Profissão dos Sonhos:"/>
                         <Input onChange={""} Title="Seu Bairro:"/>
+                        <S.ButtonContainer>
                         <Button  onPress={() => {nav.navigate("Home")}} Title="Cadastrar"/> 
+                        </S.ButtonContainer>
 
         </S.Body>
     )

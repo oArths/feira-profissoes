@@ -8,3 +8,8 @@ align-items: center;
 width: 100%;
 height: max-content;
 `;
+
+export const ButtonContainer = styled.View`
+width: 80%;
+
+`;
