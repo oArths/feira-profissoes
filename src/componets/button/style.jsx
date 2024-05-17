@@ -4,7 +4,7 @@ export const Button = styled.TouchableOpacity`
 display: flex;
 align-items: center;
 justify-content: center;
-width: 245px;
+width: 100%;
 height: 44px;
 border-radius: 5px;
 background-color: ${(props) => props.theme.colors.red};
