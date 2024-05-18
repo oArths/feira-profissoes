@@ -27,13 +27,22 @@ import { NavArrowLeft } from 'iconoir-react-native';
         
         ))}
 
-        <S.ConatainerText>
+        
+        {op == true ? (<S.ConatainerText>
             <S.ConatinerTitle>
-            <S.Title>Demonstração de Funcionalidade</S.Title>
+            <S.Title>Demonstração{'\n'}de Funcionalidade</S.Title>
             <S.Line/>
             </S.ConatinerTitle>
             <S.SubTitle>{SubTitle}</S.SubTitle>
-        </S.ConatainerText>
+        </S.ConatainerText>) :(
+             <S.ConatainerTextOP>
+             <S.ConatinerTitleOP>
+             <S.Title>Demonstração{'\n'}de Funalidade</S.Title>
+             <S.Line/>
+             </S.ConatinerTitleOP>
+             <S.SubTitle>{SubTitle}</S.SubTitle>
+         </S.ConatainerTextOP>
+        ) }
         </S.Header>
     )
 }

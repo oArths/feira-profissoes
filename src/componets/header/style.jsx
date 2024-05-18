@@ -4,8 +4,9 @@ export const Header = styled.View`
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+align-items: start;
 gap: 10px;
+width: 100%;
 
 `;
 export const Conatainer = styled.View`
@@ -33,7 +34,6 @@ width: 100%;
 export const ConatinerImg = styled.View`
 display: flex;
 align-items: end;
-padding: 0px  10px;
 width: 50%;
 
 
@@ -56,14 +56,19 @@ width: 50%;
 `;
 export const ConatainerText = styled.View`
 display: flex;
+align-items: center;
+justify-content: center;
 width: 90%;
 gap: 30px;
-
-
+`;
+export const ConatainerTextOP = styled.View`
+display: flex;
+align-items: center;
+width: 100%;
+gap: 30px;
 `;
 export const Logo = styled.Image`
 margin-top: 30px;
-margin-left: 15px;
 width: 100px;
 height: 25px;
 
@@ -87,6 +92,11 @@ display: flex;
 gap: 10px;
 width: 100%;
 `;
+export const ConatinerTitleOP = styled.View`
+display: flex;
+gap: 10px;
+width: 80%;
+`;
 export const Title = styled.Text`
 font-size: 34px;
 font-weight: 900;
@@ -100,4 +110,5 @@ background-color: ${(props) => props.theme.colors.red};
 export const SubTitle = styled.Text`
 font-size: 22px;
 font-weight: 600;
+margin-right: 30%;
 `;
