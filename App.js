@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import Home from "./src/pages/home";
 import Register from "./src/pages/register";
 import { NavigationContainer } from "@react-navigation/native";
@@ -13,7 +12,6 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-      {/* <StatusBar style="default" backgroundColor="black"  /> */}
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen
             name="Home"
