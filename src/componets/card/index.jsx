@@ -1,7 +1,7 @@
 import * as S from "./style";
 import * as I from "iconoir-react-native";
 
-  const Card = ({data,nome,bairro,sonho, onPressDelete}) => {
+  const Card = ({data,nome,bairro,sonho, onPressDelete, id}) => {
     const truncateText = (text, maxLength) => {
       if (!text) return 'undefind key'; 
       if (text.length > maxLength) {
@@ -14,7 +14,7 @@ import * as I from "iconoir-react-native";
     <S.Card elevation={1}>
       <S.Conatiner>
 
-        <S.DadosContainer>
+        <S.DadosContainer >
             <S.SubTitle>{truncateText(data,10)}</S.SubTitle>
             <S.Nome>{truncateText(nome, 25)}</S.Nome>
         </S.DadosContainer>
