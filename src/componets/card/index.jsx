@@ -26,7 +26,7 @@ import * as I from "iconoir-react-native";
 
       </S.Conatiner>
 
-      <S.ButtonConatiner>
+      {/* <S.ButtonConatiner>
 
         <S.Button >
           <I.EditPencil color="#fff" height={25} width={25} />
@@ -36,7 +36,7 @@ import * as I from "iconoir-react-native";
           <I.Trash color="#fff" height={25} width={25} />
         </S.Button>
 
-      </S.ButtonConatiner>
+      </S.ButtonConatiner> */}
     </S.Card>
   );
 };
