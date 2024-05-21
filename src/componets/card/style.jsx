@@ -3,7 +3,7 @@ import { theme } from "../../../theme";
 
 export const Card = styled.View`
 display: flex;
-flex-direction: row;
+flex-direction: row; 
 justify-content: center;
 width: 90%;
 height:  100px;
