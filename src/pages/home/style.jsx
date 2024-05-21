@@ -35,3 +35,9 @@ z-index: 1;
 bottom: 50px;
   width: 60%;
 `;
+export const TEXT =styled.Text`
+font-size: 22px;
+background-color: aqua;
+
+
+`;
