@@ -86,8 +86,16 @@ const Home = () => {
                 sonho={item.professional_goal}
                 onPressDelete={abrirModalDelete}
               />
+              
             ))}
           </S.CardContainer>
+          <Card 
+                data="oi" 
+                nome="ajsa"
+                bairro="ajsa" 
+                sonho="ajsa"
+                onPressDelete={abrirModalDelete}
+              />
     
             <S.TEXT>
               {/* Nome: {infoData[0].name} {"\n"} */}

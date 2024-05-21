@@ -25,7 +25,9 @@ export const Input = styled.TextInput`
   border-radius: 10px;
   max-width: 100%;
 
+ &:o{
 
+ }
   
 `;
 
