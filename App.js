@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import { GlobalStyle } from './global.jsx';
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
+import { StatusBar } from "expo-status-bar";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
+        <StatusBar hidden />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen
             name="Home"
