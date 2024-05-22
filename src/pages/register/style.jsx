@@ -23,3 +23,6 @@ width: 100%;
 export const ButtonContainer = styled.View`
   width: 80%;
 `;
+export const Date = styled.Text`
+font-size: 20px;
+`;
