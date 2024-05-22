@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import { theme } from "../../../theme";
+import * as I from "iconoir-react-native" 
 
 export const Body = styled.View`
   display: flex;
@@ -27,11 +28,10 @@ export const CloseModal = styled.TouchableOpacity`
 
 export const Container = styled.View`
   display: flex;
-  flex-direction: row;
-justify-content: space-around;
-/* background-color: aqua; */
-width: 100%;
+  flex-direction: column;
+justify-content:center;
 align-items: center;
+width: 100%;
 `;
 
 export const Text = styled.Text`
@@ -42,6 +42,7 @@ export const TextOP = styled.Text`
 color: ${(props) => theme.colors.cinza};
 font-size: 15px;
 `;
+
 
 export const ContainerButton = styled.View`
   display: flex;
@@ -54,7 +55,7 @@ export const Confirm = styled.TouchableOpacity`
   align-items: center;
   background-color: ${(props) => theme.colors.red};
   border-radius: 10px;
-  width: 100px;
+  width: 200px;
   height: 39px;
 `;
 export const ConfirmOP = styled(Confirm)`
