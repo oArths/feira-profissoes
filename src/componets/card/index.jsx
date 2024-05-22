@@ -15,12 +15,12 @@ import * as I from "iconoir-react-native";
       <S.Conatiner>
 
         <S.DadosContainer >
-            <S.SubTitle>{truncateText(data,10)}</S.SubTitle>
+            <S.SubTitle>{truncateText(data,10).slice(0, 10).split('-').reverse().join('-')}</S.SubTitle>
             <S.Nome>{truncateText(nome, 25)}</S.Nome>
         </S.DadosContainer>
       
       <S.InfoContainer>
-        <S.SubTitle>{truncateText(bairro, 10)}</S.SubTitle>
+        <S.SubTitle>{truncateText(bairro, 20)}</S.SubTitle>
         <S.SubTitle>{truncateText(sonho, 20)}</S.SubTitle>
       </S.InfoContainer>
 
