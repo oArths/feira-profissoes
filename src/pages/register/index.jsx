@@ -3,10 +3,70 @@ import Header from "../../componets/header";
 import Button from "../../componets/button";
 import Input from "../../componets/input";
 import { useNavigation } from "@react-navigation/native";
+import ModalOp from "../../componets/modal";
 import { Platform} from "react-native";
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import { useState } from "react";
+import DatePiker from "../../componets/date/date";
 
 const Register = () => {
   const nav = useNavigation();
+  const [modalDeleteVisible, setModalDeleteVisible] = useState(false);
+  const [data, setDate] = useState()
+
+  
+
+
+
+
+
+
+
+
+
+
+  const [ values , setValues] = useState({
+    usuNome: '',
+    usuEmail: '',
+    usuDate: '',
+    usuProf: '',
+    usuSonh: ''
+  })
+  const handleSubmit = () => {
+    // Verificação se os campos de email e senha estão em branco
+    if (values.usuEmail === '' || values.usuNome === '') {
+        setModalDeleteVisible(true)
+        return;
+    }
+  }
+
+
+  const fecharModalDelete = () => {
+    setModalDeleteVisible(false);
+  };
+
+
+
+
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+
+  const showDatePicker = () => {
+    setDatePickerVisibility(true);
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
+  };
+
+
+
+  const handleConfirm = (date) => {
+    const formattedDate = date.toISOString().slice(0, 10);
+    setDate(formattedDate)
+    setValues({ ...values, usuDate: date })
+    hideDatePicker();
+  };
+  
 
   return (
     <S.Body
@@ -23,21 +83,37 @@ const Register = () => {
           }}
         />
        </S.HeaderConatiner>
-        <Input onChange={""} Title="Nome:" />
-        <Input onChange={""} Title="Email:" />
-        <Input onChange={""} Title="Data de Nascimento:" />
-        <Input onChange={""} Title="Profissão dos Sonhos:" />
-        <Input onChange={""} Title="Seu Bairro:" />
+        <Input onChange={e => setValues({...values, usuNome: e.target.value})} Title="Nome:" />
+        <Input onChange={e => setValues({...values, usuEmail: e.target.value})} Title="Email:" />
+       <S.ButtonContainer>
+
+       <Button Title="Show Date Picker" onPress={showDatePicker} />
+       <S.Date>
+        
+       </S.Date>
+       <DatePiker Title="Data:" onPress={showDatePicker} Data={data && data.slice(0, 10).split('-').reverse().join('-')}/>
+       </S.ButtonContainer>
+       
+     
+
+
+        <Input onChange={e => setValues({...values, usuProf: e.target.value})} Title="Profissão dos Sonhos:" />
+        <Input onChange={e => setValues({...values, usuSonh: e.target.value})} Title="Seu Bairro:" />
         <S.ButtonContainer>
           <Button
-            onPress={() => {
-              nav.navigate("Home");
-            }}
+            onPress={() => {handleSubmit()}}
             Title="Cadastrar"
           />
         </S.ButtonContainer>
        </S.Main>
       </S.Scroll>
+      <ModalOp isVisible={modalDeleteVisible} onClose={fecharModalDelete}/>
+      <DateTimePickerModal
+        isVisible={isDatePickerVisible}
+        mode="date"
+        onConfirm={handleConfirm}
+        onCancel={hideDatePicker}
+      />
     </S.Body>
   );
 };
