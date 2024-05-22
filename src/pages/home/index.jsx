@@ -23,7 +23,7 @@ const Home = () => {
   };
 
    useEffect(() =>{
-      axios.get('http://localhost:8080/presence/all')
+      axios.get('http://presencesenai.eastus.cloudapp.azure.com:8080/presence/presence/all')
        .then(response => {
          setInfoData(response.data);
          console.log('Dados recebidos:', infoData);
@@ -35,38 +35,7 @@ const Home = () => {
      
 
    }, [])
-  //   getPresence = async () => {
-  //     try {
-  //         const res = await api.get('/presence/all');
-  
-  //         const  docs  = res.data;
-  
-  //         console.log(docs);
-  
-  //     } catch(err) {
-  //         // TODO
-  //         // adicionar tratamento da exceção
-  //         console.error(err);
-  //     }
-  // };
-  // const getPresence = () => {
-  //   console.log("antes da requisição")
-  //   axios.get('http://localhost:8080/presence/all')
-  //    .then(res => {
-  //      setInfoData(res.data);
-  //      console.log('Dados recebidos:', res);
-  //    })
 
-  //    .catch(error => {
-  //      console.error('erro', error);
-  //    });
-  //  }
-
-  // useEffect(() => {
-  //   getPresence();
-    
-  // }, []);
-  
 
   return (
     <S.Body>
@@ -89,17 +58,6 @@ const Home = () => {
               
             ))}
           </S.CardContainer>
-          <Card 
-                data="oi" 
-                nome="ajsa"
-                bairro="ajsa" 
-                sonho="ajsa"
-                onPressDelete={abrirModalDelete}
-              />
-    
-            <S.TEXT>
-              {/* Nome: {infoData[0].name} {"\n"} */}
-            </S.TEXT>
         </S.Conatiner>
       </S.Main>
       <S.ButtonContainer>
