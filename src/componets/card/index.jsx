@@ -1,7 +1,6 @@
 import * as S from "./style";
-import * as I from "iconoir-react-native";
 
-  const Card = ({data,nome,bairro,sonho, onPressDelete, id}) => {
+  const Card = ({data,nome,bairro,sonho}) => {
     const truncateText = (text, maxLength) => {
       if (!text) return 'undefind key'; 
       if (text.length > maxLength) {
@@ -13,7 +12,6 @@ import * as I from "iconoir-react-native";
   return (
     <S.Card elevation={1}>
       <S.Conatiner>
-
         <S.DadosContainer >
             <S.SubTitle>{truncateText(data,10).slice(0, 10).split('-').reverse().join('-')}</S.SubTitle>
             <S.Nome>{truncateText(nome, 25)}</S.Nome>
@@ -25,18 +23,6 @@ import * as I from "iconoir-react-native";
       </S.InfoContainer>
 
       </S.Conatiner>
-
-      {/* <S.ButtonConatiner>
-
-        <S.Button >
-          <I.EditPencil color="#fff" height={25} width={25} />
-        </S.Button>
-
-        <S.Button onPress={onPressDelete}>
-          <I.Trash color="#fff" height={25} width={25} />
-        </S.Button>
-
-      </S.ButtonConatiner> */}
     </S.Card>
   );
 };
