@@ -19,6 +19,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
+margin-bottom: 20px;
 `;
 export const ButtonContainer = styled.View`
   width: 80%;
