@@ -20,8 +20,9 @@ export const Title =  styled.Text`
 font-size: 16px;
 `;
 export const Input = styled.TextInput`
+font-size: 14px;
     width: 100%;
-  padding: 5px  10px 5px 10px;
+  padding: 5px  10px 5px 20px;
   color: black;
   border: 2px solid ${(props) => theme.colors.cinzaa};
   border-radius: 10px;
