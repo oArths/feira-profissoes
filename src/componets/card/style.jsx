@@ -22,8 +22,7 @@ flex-direction: column;
 align-items: center;
 justify-content: start;
 margin-top: 10px;
-padding-left: 5%;
-gap: 5px;
+gap: 8px;
 
 
 `;
@@ -38,8 +37,7 @@ export const DadosContainer = styled.View`
 display: flex;
 flex-direction: column;
 width: 100%;
-/* background-color: black; */
-gap: 10px;
+gap:7px;
 
 
 `;
