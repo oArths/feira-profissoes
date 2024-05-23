@@ -13,7 +13,7 @@ const Register = () => {
   const nav = useNavigation();
   const [modalDeleteVisible, setModalDeleteVisible] = useState(false);
   const [data, setDate] = useState()
-
+  const [NewData, setDataNew] = useState()
   
 
 
@@ -54,18 +54,26 @@ const Register = () => {
     setDatePickerVisibility(true);
   };
 
+  
   const hideDatePicker = () => {
     setDatePickerVisibility(false);
   };
-
-
-
+  
+  
   const handleConfirm = (date) => {
     const formattedDate = date.toISOString().slice(0, 10);
     setDate(formattedDate)
     setValues({ ...values, usuDate: date })
     hideDatePicker();
+    DataView(formattedDate);
   };
+  
+  const DataView = (formattedDate) =>{
+    const dateView = formattedDate.split('-').reverse().join('-');    
+    setDataNew(dateView);
+    console.warn(NewData)
+
+  }
   
 
   return (
@@ -91,7 +99,7 @@ const Register = () => {
        <S.Date>
         
        </S.Date>
-       <DatePiker Title="Data:" onPress={showDatePicker} Data={data && data.slice(0, 10).split('-').reverse().join('-')}/>
+       <DatePiker Title="Data:" onPress={showDatePicker} Data={NewData}/>
        </S.ButtonContainer>
        
      
