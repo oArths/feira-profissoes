@@ -13,7 +13,7 @@ const Home = () => {
   const nav = useNavigation();
   const [modalDeleteVisible, setModalDeleteVisible] = useState(false);
   const [infoData, setInfoData] = useState([]);
-  const [erro, setErro] = useState(false);
+  const [erro, setErro] = useState();
 
   const abrirModalDelete = () => {
     setModalDeleteVisible(true);
@@ -29,9 +29,8 @@ const Home = () => {
         try {
           const response = await api.get('/presence/all');
           setInfoData(response.data.reverse());
-          console.log('Dados recebidos:', response.data);
         } catch (error) {
-          console.error('erro', error);
+          setErro('erro', error);
         }
       };
 
