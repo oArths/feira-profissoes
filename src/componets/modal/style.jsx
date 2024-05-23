@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 import { theme } from "../../../theme";
-import * as I from "iconoir-react-native" 
 
 export const Body = styled.View`
   display: flex;

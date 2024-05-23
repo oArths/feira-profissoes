@@ -1,7 +1,7 @@
 import * as S from "./style.jsx";
 import * as I from "iconoir-react-native" 
 import { Modal } from "react-native";
-const ModalOp = ({ isVisible, onClose }) => {
+const ModalOp = ({ isVisible, onClose,  op }) => {
   
   return (
     <S.Body>
@@ -13,15 +13,25 @@ const ModalOp = ({ isVisible, onClose }) => {
       >
         <S.ModalOut onPressIn={onClose}>
           <S.ModalIn>
-            <S.Container>
-            <I.XmarkCircle
-            color="#E10613"
-            width={'50px'}
-            height={'50px'}
-            />
-                <S.Text>Oops...</S.Text>
-            </S.Container>
-            <S.TextOP>Preencha todos os campos!</S.TextOP>
+              { op ? (<><S.Container>
+              <I.CheckCircle
+              color="#0de106"
+              width={'50px'}
+              height={'50px'}
+              />
+                  <S.Text>Presença Confirmada</S.Text>
+              </S.Container>
+              <S.TextOP>Sua presensa foi confirmada</S.TextOP></>) 
+              : 
+              (<><S.Container>
+              <I.XmarkCircle
+              color="#E10613"
+              width={'50px'}
+              height={'50px'}
+              />
+                  <S.Text>Oops...</S.Text>
+              </S.Container>
+              <S.TextOP>Preencha todos os campos!</S.TextOP></>)}
             <S.ContainerButton>
               <S.Confirm
                 onPress={onClose}
