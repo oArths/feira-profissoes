@@ -1,12 +1,13 @@
 import * as S from "./style";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import Header from "../../componets/header";
 import Button from "../../componets/button";
 import Card from "../../componets/card/index";
 import { useNavigation } from "@react-navigation/native";
 import ModalOp from "../../componets/modal";
-import axios from "axios";
 import api from "../../service/api";
+import { useFocusEffect } from '@react-navigation/native';
+
 
 const Home = () => {
   const nav = useNavigation();
@@ -22,19 +23,21 @@ const Home = () => {
     setModalDeleteVisible(false);
   };
 
-   useEffect(() =>{
-      api.get('/presence/all')
-       .then(response => {
-         setInfoData(response.data);
-         console.log('Dados recebidos:', infoData);
-       })
- 
-       .catch(error => {
-         console.error('erro', error);
-       });
-     
+  useFocusEffect(
+    useCallback(() => {
+      const fetchData = async () => {
+        try {
+          const response = await api.get('/presence/all');
+          setInfoData(response.data.reverse());
+          console.log('Dados recebidos:', response.data);
+        } catch (error) {
+          console.error('erro', error);
+        }
+      };
 
-   }, [])
+      fetchData();
+    }, [])
+  );
 
 
   return (
