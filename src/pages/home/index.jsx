@@ -5,8 +5,8 @@ import Button from "../../componets/button";
 import Card from "../../componets/card/index";
 import { useNavigation } from "@react-navigation/native";
 import ModalOp from "../../componets/modal";
-// import api from "../../service/api"; 
 import axios from "axios";
+import api from "../../service/api";
 
 const Home = () => {
   const nav = useNavigation();
@@ -23,7 +23,7 @@ const Home = () => {
   };
 
    useEffect(() =>{
-      axios.get('http://presencesenai.eastus.cloudapp.azure.com:8080/presence/presence/all')
+      api.get('/presence/all')
        .then(response => {
          setInfoData(response.data);
          console.log('Dados recebidos:', infoData);
