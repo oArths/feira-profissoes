@@ -8,6 +8,7 @@
     "ios": "expo start --ios"
   },
   "dependencies": {
+    "@react-native-community/blur": "^4.4.0",
     "@react-native-community/datetimepicker": "^8.0.1",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
