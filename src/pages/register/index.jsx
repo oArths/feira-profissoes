@@ -67,7 +67,7 @@ const Register = () => {
   
 
   const DataView = (formattedDate) => {
-    const dateView = formattedDate.split('-').reverse().join('-');
+    const dateView = formattedDate.split('-').reverse().join('/');
     setDataNew(dateView);
 
   }
@@ -110,13 +110,13 @@ const Register = () => {
               }}
             />
           </S.HeaderConatiner>
-          <Input onChangeText={text => setValues({ ...values, name: text })} Title="Nome:" />
-          <Input onChangeText={text => setValues({ ...values, email: text })} Title="Email:" />
+          <Input placeholder="Digite seu nome" onChangeText={text => setValues({ ...values, name: text })} Title="Nome:" />
+          <Input placeholder="Digite seu email" onChangeText={text => setValues({ ...values, email: text })} Title="Email:" />
           <S.ButtonContainer>
-            <DatePiker Title="Data:" onPress={showDatePicker} Data={NewData} />
+            <DatePiker Title="Data de Nascimento:" onPress={showDatePicker} Data={NewData} />
           </S.ButtonContainer>
-          <Input onChangeText={text => setValues({ ...values, professional_goal: text })} Title="Profissão dos Sonhos:" />
-          <Input onChangeText={text => setValues({ ...values, neighborhood: text })} Title="Seu Bairro:" />
+          <Input placeholder="Digite seu profissão dos sonhos" onChangeText={text => setValues({ ...values, professional_goal: text })} Title="Profissão dos Sonhos:" />
+          <Input placeholder="Digite o bairro onde mora" onChangeText={text => setValues({ ...values, neighborhood: text })} Title="Seu Bairro:" />
           <S.ButtonContainer>
             <Button
               onPress={() => { handleSubmit() }}
