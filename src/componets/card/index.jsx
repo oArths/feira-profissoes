@@ -13,7 +13,7 @@ import * as S from "./style";
     <S.Card elevation={1}>
       <S.Conatiner>
         <S.DadosContainer >
-            <S.SubTitle>{truncateText(data,10).slice(0, 10).split('-').reverse().join('-')}</S.SubTitle>
+            <S.SubTitle>{truncateText(data,10).slice(0, 10).split('-').reverse().join('/')}</S.SubTitle>
             <S.Nome>{truncateText(nome, 25)}</S.Nome>
         </S.DadosContainer>
       
