@@ -1,14 +1,16 @@
 import * as S from "./style"
 import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+
+
 const Splash = () => {
     const nav = useNavigation();  
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //       nav.navigate("Home");
-    //     }, 2000);
-    //   });
+    useEffect(() => {
+        setTimeout(() => {
+          nav.navigate("Home");
+        }, 2000);
+      });
 
 return(
 <S.Body>

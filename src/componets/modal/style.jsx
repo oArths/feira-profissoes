@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { BlurView } from '@react-native-community/blur';
 import { theme } from "../../../theme";
 
 export const Body = styled.View`
@@ -10,8 +11,7 @@ export const ModalOut = styled.TouchableOpacity`
   flex: 1;
   justify-content: center;
   align-items: center;
-  backdrop-filter: bluer(10px);
-  /* background-color: rgba(0, 0, 0, 0.418); */
+  background-color: rgba(0, 0, 0, 0.418);
 `;
 export const ModalIn = styled.View`
   display: flex;

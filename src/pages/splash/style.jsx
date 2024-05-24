@@ -30,12 +30,13 @@ width: 100%;
 height: 60%;
 `;
 export const Title= styled.Text`
-font-size: 34px;
+font-size: 38px;
 font-weight: 900;
 `;
 export const SubTitle= styled.Text`
-font-size: 22px;
+font-size: 27px;
 font-weight: 400;
+margin-bottom: 40%;
 `;
 export const Footer = styled.View`
 display: flex;
