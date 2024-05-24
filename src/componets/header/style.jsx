@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { theme } from "../../../theme";
 
 export const Header = styled.View`
 display: flex;
