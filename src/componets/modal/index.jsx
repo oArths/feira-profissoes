@@ -1,7 +1,6 @@
 import * as S from "./style.jsx";
 import * as I from "iconoir-react-native" 
 import { Modal } from "react-native";
-// import { BlurView } from '@react-native-community/blur';
 
 const ModalOp = ({ isVisible, onClose,  op }) => {
   
@@ -25,7 +24,7 @@ const ModalOp = ({ isVisible, onClose,  op }) => {
               />
                   <S.Text>Presença Confirmada</S.Text>
               </S.Container>
-              <S.TextOP>Sua presensa foi confirmada</S.TextOP></>) 
+              <S.TextOP>Sua presença foi confirmada</S.TextOP></>) 
               : 
               (<><S.Container>
               <I.XmarkCircle
