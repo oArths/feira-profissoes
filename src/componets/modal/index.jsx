@@ -1,6 +1,8 @@
 import * as S from "./style.jsx";
 import * as I from "iconoir-react-native" 
 import { Modal } from "react-native";
+// import { BlurView } from '@react-native-community/blur';
+
 const ModalOp = ({ isVisible, onClose,  op }) => {
   
   return (
@@ -12,7 +14,9 @@ const ModalOp = ({ isVisible, onClose,  op }) => {
         onRequestClose={onClose}
       >
         <S.ModalOut onPressIn={onClose}>
+          
           <S.ModalIn>
+            
               { op ? (<><S.Container>
               <I.CheckCircle
               color="#0de106"
