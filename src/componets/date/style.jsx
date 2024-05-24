@@ -13,12 +13,26 @@ export const Conatiner = styled.View`
 export const Title = styled.Text`
   font-size: 16px;
 `;
+export const Datass = styled.Text`
+position: absolute;
+ left: 20px;
+ top: 5px;
+  margin-top: 5px;
+  width: 100px;
+  height: 20px;
+  font-size: 14px;
+  color: #8a8a8a;
+
+`;
 export const ConatinerInput = styled.View`
   display: flex;
   flex-direction: row;
   width: 100%;
 `;
 export const IconConatiner = styled.TouchableOpacity`
+display: flex;
+align-items: center;
+margin-left: 40%;
   width: 300px;
   height: 30px;
 `;
@@ -34,7 +48,7 @@ export const Input = styled.View`
 `;
 export const Data = styled.Text`
 position: absolute;
- left: 40px;
+ left: 20px;
  top: 5px;
   margin-top: 5px;
   width: 100px;
