@@ -19,13 +19,12 @@ export const ConatinerInput = styled.View`
   width: 100%;
 `;
 export const IconConatiner = styled.TouchableOpacity`
-  width: 40px;
+  width: 300px;
   height: 30px;
 `;
 export const Input = styled.View`
   display: flex;
   flex-direction: row;
-
   width: 100%;
   height: 40px;
   padding: 5px;
@@ -34,8 +33,11 @@ export const Input = styled.View`
   border-radius: 10px;
 `;
 export const Data = styled.Text`
+position: absolute;
+ left: 40px;
+ top: 5px;
   margin-top: 5px;
-  width: 200px;
+  width: 100px;
   height: 20px;
   font-size: 15px;
 `;

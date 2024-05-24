@@ -54,12 +54,17 @@ const Register = () => {
 
 
   const handleConfirm = (date) => {
-    const formattedDate = date.toISOString().slice(0, 10);
-    setDate(formattedDate)
-    setValues({ ...values, date_birth: formattedDate })
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+    
+    setDate(formattedDate);
+    setValues({ ...values, date_birth: formattedDate });
     hideDatePicker();
     DataView(formattedDate);
   };
+  
 
   const DataView = (formattedDate) => {
     const dateView = formattedDate.split('-').reverse().join('-');
