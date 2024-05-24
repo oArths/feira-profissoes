@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Feira de Profissoes",
-    "slug": "Feira de Profissoes",
+    "slug": "Feira-de-Profissoes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.oarths.FeiradeProfissoes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fa196390-ee8e-4f1d-a326-32326274b90d"
+      }
     }
   }
 }
