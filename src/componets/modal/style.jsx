@@ -10,7 +10,8 @@ export const ModalOut = styled.TouchableOpacity`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.418);
+  backdrop-filter: bluer(10px);
+  /* background-color: rgba(0, 0, 0, 0.418); */
 `;
 export const ModalIn = styled.View`
   display: flex;
